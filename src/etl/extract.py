@@ -15,7 +15,7 @@ from time import sleep
 #data manipulation library
 import pandas as pd
 
-def scrape(destination, headless=True, export= False):
+def extract(destination, headless=True, export= True):
 
     """"
     Web-scraping function to read all pages in airbnb and save the results in a dataframe.
