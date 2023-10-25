@@ -2,7 +2,7 @@
 import pandas as pd
 import os
 
-def transform(path, export=False):
+def transform(path):
     """"
     Function to transform all files extracted to a single dataframe.
     
@@ -10,9 +10,7 @@ def transform(path, export=False):
     ----------
     path : str
         Path of csv files to read and transform.
-
-    export : str
-        If True, the result will be exported to a csv file.
+    
     """
 
     files = [file for file in os.listdir(path) if file.endswith(".csv")]
@@ -25,8 +23,4 @@ def transform(path, export=False):
         frames.append(data)
 
     df = pd.concat(frames, ignore_index=True)
-
-    if export == True:
-        df.to_csv('final_data.csv', index=False, sep=";")
-    
     return df
