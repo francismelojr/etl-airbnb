@@ -17,6 +17,11 @@ fsspec = "^2023.10.0"
 blue = "^0.9.1"
 isort = "^5.12.0"
 taskipy = "^1.12.0"
+mkdocs = "^1.5.3"
+mkdocstrings-python = "^1.7.3"
+pygments = "^2.16.1"
+mkdocs-material = "^9.4.6"
+pymdown-extensions = "^10.3.1"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -28,3 +33,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.taskipy.tasks]
 format = "isort . && blue ."
+test = "poetry run pytest -v"

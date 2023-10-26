@@ -1,0 +1,21 @@
+site_name: ETL Airbnb
+
+theme:
+  name: material
+  palette:
+    primary: red
+  language: pt
+
+repo_name: "francismelojr/etl-airbnb"
+repo_url: "https://github.com/francismelojr/etl-airbnb"
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
