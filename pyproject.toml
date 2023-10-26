@@ -34,3 +34,4 @@ build-backend = "poetry.core.masonry.api"
 [tool.taskipy.tasks]
 format = "isort . && blue ."
 test = "poetry run pytest -v"
+run = "python src/main.py"
