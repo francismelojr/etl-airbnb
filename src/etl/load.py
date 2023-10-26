@@ -1,5 +1,7 @@
 import os
+
 import pandas as pd
+
 
 def load(data_frame: pd.DataFrame, file_name: str) -> str:
     """
@@ -17,5 +19,5 @@ def load(data_frame: pd.DataFrame, file_name: str) -> str:
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
-    data_frame.to_csv(f"{output_path}/{file_name}.csv", index=False, sep=';')
-    return "Arquivo salvo com sucesso"
+    data_frame.to_csv(f'{output_path}/{file_name}.csv', index=False, sep=';')
+    return 'Arquivo salvo com sucesso'
