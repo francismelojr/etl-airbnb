@@ -29,9 +29,9 @@ def test_transform():
     df1.to_csv(path_df1, sep=';')
     df2.to_csv(path_df2, sep=';')
 
+    df = transform(output_dir)
+
     os.remove(path_df1)
     os.remove(path_df2)
-
-    df = transform(output_dir)
 
     assert isinstance(df, pd.DataFrame)
