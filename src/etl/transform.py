@@ -16,6 +16,9 @@ def transform(path):
     return: A pandas dataframe with all the dataframes in the folder concatenated.
     """
 
+    if not os.path.exists(path):
+        os.makedirs(path)
+
     files = [file for file in os.listdir(path) if file.endswith('.csv')]
 
     frames = []
