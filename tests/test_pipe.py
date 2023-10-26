@@ -14,10 +14,9 @@ def test_transform():
 
     from src.etl.transform import transform
 
-    current_path = os.getcwd()
-    relative_path = '\src\etl\output'
-    final_path = current_path + relative_path
+    current_directory = os.path.dirname(os.path.realpath(__file__))
+    output_dir = os.path.abspath(os.path.join(current_directory, os.pardir, "src", "etl", "output"))
 
-    df = transform(path=final_path)
+    df = transform(path=output_dir)
 
     assert isinstance(df, pd.DataFrame)
