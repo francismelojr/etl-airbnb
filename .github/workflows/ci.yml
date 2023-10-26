@@ -14,9 +14,11 @@ jobs:
         with:
           python-version: 3.11.3
 
-      - name: Install poetry
+      - name: Set up Poetry
         run: |
           curl -sSL https://install.python-poetry.org | python3 -
+          export PATH="$HOME/.poetry/bin:$PATH"
+          poetry --version
 
       - name: Install dependencies with poetry
         run: poetry install
