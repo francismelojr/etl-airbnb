@@ -38,16 +38,8 @@ def extract(destination, headless=True, export=True):
 
     # setting options
     options = Options()
-    options.add_argument('--start-maximized')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-gpu')
-    options.add_argument('--disable-crash-reporter')
-    options.add_argument('--disable-extensions')
-    options.add_argument('--disable-in-process-stack-traces')
     options.add_argument('--disable-logging')
-    options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--log-level=3')
-    options.add_argument('--output=/dev/null')
 
     if headless == True:
         options.add_argument('--headless')
