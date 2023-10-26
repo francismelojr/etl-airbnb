@@ -23,6 +23,9 @@ def test_transform():
     path_df1 = os.path.join(output_dir, 'df1.csv')
     path_df2 = os.path.join(output_dir, 'df2.csv')
 
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
     df1.to_csv(path_df1, sep=';')
     df2.to_csv(path_df2, sep=';')
 
