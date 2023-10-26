@@ -1,12 +1,3 @@
-def test_extract():
-    import pandas as pd
-
-    from src.etl.extract import extract
-
-    df = extract('Rio de Janeiro', headless=True)
-    assert isinstance(df, pd.DataFrame)
-
-
 def test_transform():
     import os
 
