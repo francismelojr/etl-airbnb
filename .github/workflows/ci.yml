@@ -15,10 +15,7 @@ jobs:
           python-version: 3.11.3
 
       - name: Install Poetry
-        run: |
-          (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicP | python -)
-          $env:Path += ";$HOME\.poetry\bin"
-          poetry --version
+        run: pip install poetry
 
       - name: Install dependencies with poetry
         run: poetry install
