@@ -15,7 +15,8 @@ def load(data_frame: pd.DataFrame, file_name: str) -> str:
     return: "Arquivo salvo com sucesso"
 
     """
-    output_path = os.path.dirname(__file__) + '\\output'
+    current_directory = os.path.dirname(os.path.realpath(__file__))
+    output_path = os.path.join(current_directory, 'output')
     if not os.path.exists(output_path):
         os.makedirs(output_path)
 
